@@ -1,7 +1,22 @@
-body {
-    background-color: black;
+/* body {
+    background-color: #000000;
     height: 100%;
-}
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+  }
+  
+  marquee {
+  }
 
 p {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -9,19 +24,118 @@ p {
     color: white;
 }
 
-.container {
-    position: absolute;
-    top: 75%;
-    left: 25%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    color: white;
-    font-family: monospace;
-    font-size: larger;
+img {
+    width: 40%;
+    height: auto;
 }
 
-a:visited { text-decoration: underline; color: white; }
+
+/* a:visited { text-decoration: underline; color: white; }
 a:hover { text-decoration: none; color:white; }
 a:focus { text-decoration: none; color:white; }
-a:hover, a:active { text-decoration: none; color:white }
+a:hover, a:active { text-decoration: none; color:white } */
+
+.container {
+    flex: auto;
+}
+
+.demo{
+    width:100%;
+    height:100%;
+    font-size:5em;
+    float:left;
+    text-align:center;
+  }
+  
+  .rainbow-bg{
+          animation: rainbow-bg 5s linear;
+          animation-iteration-count: infinite;
+  }
+  
+  .rainbow-h2{
+          animation: rainbow 2s linear;
+          animation-iteration-count: infinite;
+  }
+
+  .rainbow-p{
+        animation: rainbow 0.5s linear;
+        animation-iteration-count: infinite;
+    }
+  
+  @keyframes rainbow-bg{
+          100%,0%{
+              background-color: rgb(255,0,0);
+          }
+          8%{
+              background-color: rgb(255,127,0);
+          }
+          16%{
+              background-color: rgb(255,255,0);
+          }
+          25%{
+              background-color: rgb(127,255,0);
+          }
+          33%{
+              background-color: rgb(0,255,0);
+          }
+          41%{
+              background-color: rgb(0,255,127);
+          }
+          50%{
+              background-color: rgb(0,255,255);
+          }
+          58%{
+              background-color: rgb(0,127,255);
+          }
+          66%{
+              background-color: rgb(0,0,255);
+          }
+          75%{
+              background-color: rgb(127,0,255);
+          }
+          83%{
+              background-color: rgb(255,0,255);
+          }
+          91%{
+              background-color: rgb(255,0,127);
+          }
+  }
+  
+  @keyframes rainbow{
+          100%,0%{
+              color: rgb(255,0,0);
+          }
+          8%{
+              color: rgb(255,127,0);
+          }
+          16%{
+              color: rgb(255,255,0);
+          }
+          25%{
+              color: rgb(127,255,0);
+          }
+          33%{
+              color: rgb(0,255,0);
+          }
+          41%{
+              color: rgb(0,255,127);
+          }
+          50%{
+              color: rgb(0,255,255);
+          }
+          58%{
+              color: rgb(0,127,255);
+          }
+          66%{
+              color: rgb(0,0,255);
+          }
+          75%{
+              color: rgb(127,0,255);
+          }
+          83%{
+              color: rgb(255,0,255);
+          }
+          91%{
+              color: rgb(255,0,127);
+          }
+  }
